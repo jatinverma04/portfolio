@@ -25,7 +25,7 @@ export const heroData = {
   ),
   actions: {
     primary: { label: 'View My Work →', href: '#projects' },
-    resume: { label: 'Download Resume', href: 'https://drive.google.com/file/d/1FaIjcc_17_94RppIQhMIi48HrXOiJ5Mk/view?usp=sharing' },
+    resume: { label: 'Download Resume', href: 'https://drive.google.com/file/d/1Cet18VUU6qK1f25wRsJX7L_YVuuxxGho/view?usp=sharing' },
     connect: { label: "Let's Connect", href: '#contact' }
   }
 };

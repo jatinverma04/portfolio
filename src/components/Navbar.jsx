@@ -21,11 +21,12 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'glass shadow-lg shadow-black/20 py-3' : 'bg-transparent py-5'
       }`}
+      style={{ border: 'none', outline: 'none' }}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="text-xl font-bold gradient-text tracking-tight">
-          Jatin Verma
+          JV.
         </a>
 
         {/* Desktop Links */}

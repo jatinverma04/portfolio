@@ -14,12 +14,19 @@ export default function Hero() {
     >
       {/* Dynamic Background */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none [&_canvas]:!absolute [&_canvas]:!z-0">
-        {theme === 'dark' && (
+        {theme === 'dark' ? (
           <Starfield
             starCount={1000}
             starColor={[255, 255, 255]}
             speedFactor={0.05}
             backgroundColor="black"
+          />
+        ) : (
+          <Starfield
+            starCount={1000}
+            starColor={[0, 0, 0]}
+            speedFactor={0.05}
+            backgroundColor="#fdf5f6"
           />
         )}
       </div>
