@@ -39,7 +39,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-rose-400 font-medium uppercase tracking-widest text-sm mb-2">{contactData.header}</p>
+          <p className="text-violet-400 font-medium uppercase tracking-widest text-sm mb-2">{contactData.header}</p>
           <h2 className="text-4xl md:text-5xl font-bold text-primary-var">{contactData.title}</h2>
           <p className="text-muted mt-4 max-w-xl mx-auto">
             {contactData.description}
@@ -56,13 +56,13 @@ export default function Contact() {
                 href={link.href}
                 target={link.href.startsWith('mailto') ? '_self' : '_blank'}
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 glass rounded-xl border border-white/5 hover:border-rose-500/30 group transition-all duration-200 hover:-translate-y-0.5 glow-hover"
+                className="flex items-center gap-4 p-4 glass rounded-xl border border-white/5 hover:border-violet-500/30 group transition-all duration-200 hover:-translate-y-0.5 glow-hover"
               >
-                <span className="text-gray-300 group-hover:text-rose-400 transition-colors">{link.icon}</span>
+                <span className="text-gray-300 group-hover:text-violet-400 transition-colors">{link.icon}</span>
                 <div>
                   <p className="text-muted text-sm font-semibold tracking-wider">{link.label}</p>
                 </div>
-                <span className="ml-auto text-gray-600 group-hover:text-rose-400 transition-colors">↗</span>
+                <span className="ml-auto text-gray-600 group-hover:text-violet-400 transition-colors">↗</span>
               </a>
             ))}
           </div>
@@ -88,7 +88,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="John Doe"
-                    className="w-full bg-card-var border border-var rounded-xl px-4 py-3 text-primary-var placeholder-[var(--text-muted)] text-sm outline-none focus:border-rose-500/60 transition-all duration-200"
+                    className="w-full bg-card-var border border-var rounded-xl px-4 py-3 text-primary-var placeholder-[var(--text-muted)] text-sm outline-none focus:border-violet-500/60 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -102,7 +102,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full bg-card-var border border-var rounded-xl px-4 py-3 text-primary-var placeholder-[var(--text-muted)] text-sm outline-none focus:border-rose-500/60 transition-all duration-200"
+                    className="w-full bg-card-var border border-var rounded-xl px-4 py-3 text-primary-var placeholder-[var(--text-muted)] text-sm outline-none focus:border-violet-500/60 transition-all duration-200"
                   />
                 </div>
                 <div>
@@ -116,18 +116,21 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Hi Jatin, I'd like to connect about..."
-                    className="w-full bg-card-var border border-var rounded-xl px-4 py-3 text-primary-var placeholder-[var(--text-muted)] text-sm outline-none focus:border-rose-500/60 transition-all duration-200 resize-none"
+                    className="w-full bg-card-var border border-var rounded-xl px-4 py-3 text-primary-var placeholder-[var(--text-muted)] text-sm outline-none focus:border-violet-500/60 transition-all duration-200 resize-none"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-semibold text-sm transition-all duration-200 hover:shadow-xl hover:shadow-rose-500/30 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full py-3 rounded-xl text-white font-semibold text-sm transition-all duration-200 hover:shadow-xl hover:shadow-violet-500/30 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
+                  style={{ backgroundColor: 'var(--accent)' }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--accent-hover)')}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'var(--accent)')}
                 >
                   {loading ? 'Sending...' : 'Send Message ✉️'}
                 </button>
                 {error && (
-                  <p className="text-red-400 text-xs text-center mt-1">Something went wrong. Please try again.</p>
+                  <p className="text-violet-400 text-xs text-center mt-1">Something went wrong. Please try again.</p>
                 )}
               </form>
             )}

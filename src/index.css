@@ -6,40 +6,40 @@
 
 :root,
 [data-theme="dark"] {
-  --bg:           #0d0608;
-  --bg-surface:   #160a0d;
+  --bg:           #0a0812;
+  --bg-surface:   #110e1a;
   --bg-card:      rgba(255, 255, 255, 0.04);
-  --accent:       #9b2335;
-  --accent-hover: #b52b3e;
-  --accent-glow:  rgba(155, 35, 53, 0.35);
-  --accent-soft:  rgba(155, 35, 53, 0.15);
-  --text-primary: #f0e6e8;
-  --text-muted:   #a08890;
+  --accent:       #8b5cf6;
+  --accent-hover: #a78bfa;
+  --accent-glow:  rgba(139, 92, 246, 0.35);
+  --accent-soft:  rgba(139, 92, 246, 0.15);
+  --text-primary: #e8e6f0;
+  --text-muted:   #9088a0;
   --border:       rgba(255, 255, 255, 0.08);
-  --border-accent:rgba(155, 35, 53, 0.30);
-  --scrollbar-bg: #160a0d;
+  --border-accent:rgba(139, 92, 246, 0.30);
+  --scrollbar-bg: #110e1a;
   --glass-bg:     rgba(255, 255, 255, 0.04);
-  --orb1:         rgba(155, 35, 53, 0.25);
-  --orb2:         rgba(100, 20, 35, 0.18);
+  --orb1:         rgba(139, 92, 246, 0.25);
+  --orb2:         rgba(109, 40, 217, 0.18);
   --bg-section:   rgba(0, 0, 0, 0.4);
 }
 
 [data-theme="light"] {
-  --bg:           #fdf5f6;
-  --bg-surface:   #f5e8ea;
+  --bg:           #f8f5fd;
+  --bg-surface:   #ede8f5;
   --bg-card:      rgba(0, 0, 0, 0.03);
-  --accent:       #9b2335;
-  --accent-hover: #b52b3e;
-  --accent-glow:  rgba(155, 35, 53, 0.25);
-  --accent-soft:  rgba(155, 35, 53, 0.10);
-  --text-primary: #1a0a0d;
-  --text-muted:   #6b4a50;
+  --accent:       #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-glow:  rgba(124, 58, 237, 0.25);
+  --accent-soft:  rgba(124, 58, 237, 0.10);
+  --text-primary: #1a0e2e;
+  --text-muted:   #5b4a6b;
   --border:       rgba(0, 0, 0, 0.08);
-  --border-accent:rgba(155, 35, 53, 0.25);
-  --scrollbar-bg: #f5e8ea;
+  --border-accent:rgba(124, 58, 237, 0.25);
+  --scrollbar-bg: #ede8f5;
   --glass-bg:     rgba(255, 255, 255, 0.60);
-  --orb1:         rgba(155, 35, 53, 0.12);
-  --orb2:         rgba(100, 20, 35, 0.08);
+  --orb1:         rgba(124, 58, 237, 0.12);
+  --orb2:         rgba(109, 40, 217, 0.08);
   --bg-section:   rgba(0, 0, 0, 0.03);
 }
 
@@ -83,10 +83,7 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(135deg, #9b2335, #c0392b, #e74c5a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent);
   }
 
   .glass {

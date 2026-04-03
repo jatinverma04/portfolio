@@ -26,7 +26,7 @@ export default function Hero() {
             starCount={1000}
             starColor={[0, 0, 0]}
             speedFactor={0.05}
-            backgroundColor="#fdf5f6"
+            backgroundColor="#f8f5fd"
           />
         )}
       </div>

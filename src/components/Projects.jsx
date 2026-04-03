@@ -7,7 +7,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <p className="text-rose-400 font-medium uppercase tracking-widest text-sm mb-2">Things I've built</p>
+        <p className="text-violet-400 font-medium uppercase tracking-widest text-sm mb-2">Things I've built</p>
         <h2 className="text-4xl md:text-5xl font-bold text-primary-var">Projects</h2>
       </div>
 
@@ -20,7 +20,7 @@ export default function Projects() {
             {/* Top */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-2xl shadow-lg`}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shadow-lg" style={{ backgroundColor: 'var(--accent-soft)' }}>
                   {project.emoji}
                 </div>
                 <div>
@@ -32,7 +32,7 @@ export default function Projects() {
               <ul className="space-y-2 mb-5">
                 {project.bullets.map((point, i) => (
                   <li key={i} className="flex gap-2 text-muted text-sm leading-relaxed">
-                    <span className="text-rose-400 mt-0.5 shrink-0">▸</span>
+                    <span className="text-violet-400 mt-0.5 shrink-0">▸</span>
                     <span>{point}</span>
                   </li>
                 ))}

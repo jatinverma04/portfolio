@@ -39,10 +39,10 @@ export const aboutData = {
       I'm a Computer Science Engineering graduate from <LinkPreview url="https://www.cuchd.in/" className="text-primary-var font-semibold">Chandigarh University</LinkPreview> with a strong passion for Full Stack Development.
     </>,
     <>
-      I specialize in <span className="text-rose-400 font-medium">C++</span>, building responsive, user-friendly web interfaces using <span className="text-rose-400 font-medium">React.js</span>, modern CSS tools like <span className="text-rose-400 font-medium">Tailwind CSS</span>, and working with <span className="text-rose-400 font-medium">Databases</span> like SQL, PostgreSQL and MongoDB. I enjoy solving real-world problems through thoughtful design and clean code.
+      I specialize in <span className="text-violet-400 font-medium">C++</span>, building responsive, user-friendly web interfaces using <span className="text-violet-400 font-medium">React.js</span>, modern CSS tools like <span className="text-violet-400 font-medium">Tailwind CSS</span>, and working with <span className="text-violet-400 font-medium">Databases</span> like SQL, PostgreSQL and MongoDB. I enjoy solving real-world problems through thoughtful design and clean code.
     </>,
     <>
-      Beyond the frontend, I have a strong understanding of <span className="text-rose-400 font-medium">Node.js</span> that helps me collaborate effectively with backend teams. I'm actively looking for opportunities where I can grow, contribute, and build things that matter.
+      Beyond the frontend, I have a strong understanding of <span className="text-violet-400 font-medium">Node.js</span> that helps me collaborate effectively with backend teams. I'm actively looking for opportunities where I can grow, contribute, and build things that matter.
     </>
   ]
 };
@@ -195,8 +195,8 @@ export const GitHubIcon = () => (
 export const skillCategories = [
   {
     title: 'Frontend',
-    color: 'from-rose-900/30 to-pink-900/20 border-rose-800/30',
-    headerColor: 'text-rose-400',
+    color: 'from-violet-900/30 to-purple-900/20 border-violet-800/30',
+    headerColor: 'text-violet-400',
     headerIcon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
     skills: [
       { name: 'React.js', icon: <ReactIcon />, level: 85 },
@@ -210,8 +210,8 @@ export const skillCategories = [
   },
   {
     title: 'Backend',
-    color: 'from-red-900/30 to-rose-900/20 border-red-800/30',
-    headerColor: 'text-red-400',
+    color: 'from-violet-900/30 to-purple-900/20 border-violet-800/30',
+    headerColor: 'text-violet-400',
     headerIcon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" /></svg>,
     skills: [
       { name: 'Node.js', icon: <NodeIcon />, level: 70 },
@@ -245,8 +245,8 @@ export const skillCategories = [
   },
   {
     title: 'Languages',
-    color: 'from-rose-800/25 to-red-900/25 border-rose-700/30',
-    headerColor: 'text-rose-300',
+    color: 'from-violet-800/25 to-purple-900/25 border-violet-700/30',
+    headerColor: 'text-violet-300',
     headerIcon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>,
     skills: [
       { name: 'JavaScript', icon: <JSIcon /> },
@@ -257,25 +257,25 @@ export const skillCategories = [
   },
   {
     title: 'Concepts',
-    color: 'from-red-950/40 to-rose-950/30 border-red-900/30',
-    headerColor: 'text-rose-400',
+    color: 'from-violet-950/40 to-purple-950/30 border-violet-900/30',
+    headerColor: 'text-violet-400',
     headerIcon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m1.636-6.364l.707.707M12 21v-1M7.05 7.05A7 7 0 1016.95 16.95 7 7 0 007.05 7.05z" /></svg>,
     skills: [
       {
         name: 'Data Structures & Algorithms',
-        icon: <svg className="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4" /></svg>,
+        icon: <svg className="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4" /></svg>,
       },
       {
         name: 'Operating Systems',
-        icon: <svg className="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><rect x="2" y="3" width="20" height="14" rx="2" strokeLinecap="round" strokeLinejoin="round" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 21h8M12 17v4" /></svg>,
+        icon: <svg className="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><rect x="2" y="3" width="20" height="14" rx="2" strokeLinecap="round" strokeLinejoin="round" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 21h8M12 17v4" /></svg>,
       },
       {
         name: 'DBMS',
-        icon: <svg className="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><ellipse cx="12" cy="5" rx="9" ry="3" /><path strokeLinecap="round" strokeLinejoin="round" d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3" /></svg>,
+        icon: <svg className="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><ellipse cx="12" cy="5" rx="9" ry="3" /><path strokeLinecap="round" strokeLinejoin="round" d="M3 5v14c0 1.657 4.03 3 9 3s9-1.343 9-3V5M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3" /></svg>,
       },
       {
         name: 'OOPs',
-        icon: <svg className="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>,
+        icon: <svg className="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>,
       },
     ],
   },
