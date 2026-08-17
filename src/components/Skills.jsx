@@ -1,49 +1,58 @@
+import React from 'react'
 import { skillCategories } from '../constants'
+import SectionHeader from './SectionHeader'
+import {
+  Code2,
+  Server,
+  Database,
+  Terminal,
+  Wrench,
+  Cpu,
+} from 'lucide-react'
 
-
-// ─── Skill Pill ───────────────────────────────────────────────────────────────
-
-function SkillPill({ name, icon }) {
-  return (
-    <div className="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-card-var border border-var hover:border-violet-500/40 hover:bg-theme transition-all duration-200 group">
-      <span className="shrink-0">{icon}</span>
-      <span className="text-muted group-hover:text-primary-var text-sm font-medium transition-colors">{name}</span>
-    </div>
-  )
+const categoryIcons = {
+  'Frontend': Code2,
+  'Backend & APIs': Server,
+  'Databases & ORM': Database,
+  'Languages': Terminal,
+  'Tools & Ecosystem': Wrench,
+  'Core Computer Science': Cpu,
 }
-
-// ─── Skills Section ───────────────────────────────────────────────────────────
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-padding bg-strong">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-violet-400 font-medium uppercase tracking-widest text-sm mb-2">What I work with</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-var">Skills</h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {skillCategories.map((cat) => (
+    <SectionHeader id="skills" title="Skills">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {skillCategories.map((cat) => {
+          const Icon = categoryIcons[cat.category] || Code2
+          return (
             <div
-              key={cat.title}
-              className="glass rounded-2xl p-6 border hover:-translate-y-1 transition-all duration-300 glow-hover"
-              style={{ borderColor: 'var(--border)' }}
+              key={cat.category}
+              className="p-4 rounded-xl border border-border/80 bg-surface/50 hover:bg-surface transition-colors duration-150"
             >
-              <div className={`flex items-center gap-2 mb-5 ${cat.headerColor}`}>
-                {cat.headerIcon}
-                <h3 className="text-base font-bold">{cat.title}</h3>
+              {/* Category Title with Lucide Icon */}
+              <div className="flex items-center gap-2 mb-3">
+                <Icon className="size-4 text-accent" />
+                <h3 className="mono-label text-foreground font-semibold">
+                  {cat.category}
+                </h3>
               </div>
-              <div className="flex flex-wrap gap-2">
+
+              {/* Skill Badges */}
+              <ul className="flex flex-wrap gap-1.5">
                 {cat.skills.map((skill) => (
-                  <SkillPill key={skill.name} name={skill.name} icon={skill.icon} />
+                  <li
+                    key={skill}
+                    className="mono-meta text-[0.75rem] rounded-md border border-border bg-elevated/60 px-2 py-0.5 text-muted-foreground transition-all duration-150 hover:border-accent/40 hover:bg-accent-soft hover:text-accent"
+                  >
+                    {skill}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
-          ))}
-        </div>
+          )
+        })}
       </div>
-    </section>
+    </SectionHeader>
   )
 }

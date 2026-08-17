@@ -1,69 +1,67 @@
+import React from 'react'
 import { educationData } from '../constants'
+import SectionHeader from './SectionHeader'
+import { GraduationCap, MapPin, Calendar, Award } from 'lucide-react'
 
 export default function Education() {
   return (
-    <section id="education" className="section-padding bg-strong">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-violet-400 font-medium uppercase tracking-widest text-sm mb-2">{educationData.header}</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-var">{educationData.title}</h2>
-        </div>
-
-        {/* Timeline */}
-        <div className="max-w-3xl mx-auto relative">
-          {/* Vertical line */}
-          <div className="absolute left-6 top-0 bottom-0 w-px hidden sm:block" style={{ backgroundColor: 'var(--accent)' }} />
-
-          <div className="rounded-2xl border border-var bg-card-var p-6 sm:pl-16 relative hover:-translate-y-1 transition-all duration-300">
-            {/* Circle on timeline */}
-            <div className="absolute left-4 top-7 w-4 h-4 rounded-full bg-violet-500 border-2 border-[#0a0a1a] shadow-lg shadow-violet-500/50 hidden sm:block" />
-
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+    <SectionHeader id="education" title="Education">
+      <div className="space-y-6">
+        {educationData.map((edu, idx) => (
+          <div
+            key={idx}
+            className="rounded-xl border border-border bg-surface p-5 sm:p-6 transition-all duration-150 hover:border-accent/30 shadow-soft"
+          >
+            {/* Header: Degree & Duration */}
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-2">
               <div>
-                <h3 className="text-primary-var font-bold text-xl">
-                  {educationData.degree}
+                <h3 className="text-base font-semibold text-foreground">
+                  {edu.degree}
                 </h3>
-                <p className="text-violet-400 font-semibold text-base mt-0.5">
-                  {educationData.major}
-                </p>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-xs text-muted-foreground">
+                  <span className="font-medium text-foreground/90">
+                    {edu.institution}
+                  </span>
+                  <span>·</span>
+                  <span className="inline-flex items-center gap-1">
+                    <MapPin className="size-3" />
+                    {edu.location}
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2 self-start sm:self-auto">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-card-var border border-var text-green-500 text-sm font-semibold">
-                  <span className="w-2 h-2 bg-green-500 rounded-full" />
-                  {educationData.duration}
+
+              {/* Badges: Duration & CGPA */}
+              <div className="flex flex-wrap items-center gap-2 pt-1 sm:pt-0">
+                <span className="mono-meta inline-flex items-center gap-1 text-[0.75rem] px-2.5 py-0.5 rounded-full border border-border bg-elevated text-muted-foreground">
+                  <Calendar className="size-3" />
+                  {edu.duration}
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-card-var border border-var text-yellow-500 text-sm font-semibold">
-                  {educationData.grade}
+                <span className="mono-meta inline-flex items-center gap-1 text-[0.75rem] px-2.5 py-0.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium">
+                  <Award className="size-3" />
+                  {edu.grade}
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 text-muted mb-4">
-              <span>🏛️</span>
-              <span className="font-medium text-primary-var">{educationData.institution}</span>
-              <span className="text-muted opacity-60">·</span>
-              <span className="text-sm">{educationData.location}</span>
-            </div>
-
-            <p className="text-muted text-sm leading-relaxed">
-              {educationData.description}
+            {/* Description */}
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mt-3">
+              {edu.description}
             </p>
 
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mt-4">
-              {educationData.tags.map((tag) => (
+            {/* Coursework Tags */}
+            <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-border/50">
+              {edu.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2.5 py-1 rounded-full bg-card-var border border-var text-muted text-xs font-medium"
+                  className="mono-meta text-[0.7rem] px-2 py-0.5 rounded-md border border-border bg-elevated/70 text-muted-foreground"
                 >
                   {tag}
                 </span>
               ))}
             </div>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </SectionHeader>
   )
 }
